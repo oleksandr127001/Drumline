@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Machine</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+	<div class="drumMachine">
+
+		<div class="topPanel">
+			<div class="tempo">
+				<div class="tempo__screen">BPM: 120</div>
+				<div class="tempo__control">
+					<div class="tempo__control--up">+</div>
+					<div class="tempo__control--down">-</div>
+				</div>
+			</div>
+			<div class="playPause"></div>
+			<div class="add">ADD</div>
+			<div class="clear">CLEAR</div>
+		</div>
+	
+		<div class="middlePanel"><span>DRUMLINE</span><span>The Drum Machine</span></div>
+
+		<div class="mainPanel">
+			<div class="drum">
+				<select name="drum__sound" class="drum__sound__selector">
+					<optgroup label="Rock Kit">
+						<option value="http://www.brutaltabs.com/drumkit/ride.mp3">Ride</option>
+						<option value="http://www.brutaltabs.com/drumkit/hihat.mp3">Hi-Hat</option>
+						<option value="http://www.brutaltabs.com/drumkit/snare.mp3">Snare</option>
+						<option value="http://www.brutaltabs.com/drumkit/bass.mp3">Bass</option>
+					</optgroup>
+				</select>
+				
+				<div class="drum__note">		
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+					<div class="drum__note--checkbox"><label><input type="checkbox"/></label></div>
+				
+					<div title="delete" class="drum__note--del">DEL</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	
+</body>
+</html>
