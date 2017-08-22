@@ -29,7 +29,6 @@ body {
 	border: 3px solid #808698;
 	border-radius: 10px;
 }
-
 /* topPanel */
 .topPanel {
 	display: flex;
@@ -51,21 +50,19 @@ body {
 	height: 55px;
 	margin-right: 5px;
 	background-color: #B8BED0;
-}
-.playPause {
-	background-image: url("../images/stop.png");
-	background-repeat: no-repeat;
+	text-transform: uppercase;
 }
 .playPause:before,
 .add:before, 
 .clear:before {
 	content: '';
 	position: absolute;
+	top: 2px;
+	left: 2px;
 	width: calc( 100% - 6px );
 	height: calc( 100% - 6px );
 	border: 1px solid #808698;
 	border-radius: 2px;
-	cursor: pointer;
 	color: #A62225;
 }
 .clear:before {
@@ -76,9 +73,11 @@ body {
 	right: 0;
 	border-radius: 0 6px 0 0;
 }
+.playPause:hover,
 .add:hover,
 .clear:hover {
-	color: #3B5474;
+	background-color: #3B5474;
+	cursor: pointer;
 }
 .tempo {
 	display: flex;
@@ -126,7 +125,6 @@ body {
 	background-color: #3B5474;
 	cursor: pointer;
 }
-
 /* middlePanel */
 .middlePanel {
 	width: 100%;
@@ -152,7 +150,6 @@ body {
 .middlePanel span:last-child {
 	font-size: 15px; 
 }
-
 /* mainPanel */
 .mainPanel {
 	width: 100%;
@@ -173,7 +170,6 @@ body {
 .mainPanel { 
 	-ms-overflow-style: none; 
 }
-
 /* drum */
 .drum {
 	width: 555px;
@@ -181,9 +177,10 @@ body {
 	margin: 10px 0px 0 10px; 
 	border-bottom: 1px solid #B8BED0;
 	padding: 5px 0 12px 0;
+	display: none;
 }
 .drum select {
-	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519' fill='white'/></svg>");
+	background-image: url("../images/arrow.png");
 	width: 77px;
 	height: 35px;
 	font-family: 'Yanone', sans-serif;
@@ -207,12 +204,14 @@ body {
 	-ms-appearance: none;
 	appearance: none!important;
 }
+select::-ms-expand {
+    display: none;
+}
 .drum select:focus, 
 .drum select:active {
 	cursor: pointer;
 	border: 0;
 }
-
 /* drum__note */
 .drum__note {
 	position: absolute;
@@ -250,14 +249,13 @@ body {
 input[type=checkbox] {
 	visibility: hidden;
 }
-
 /* drum__note--del */
 .drum__note--del {
-	display: inline-block;
+	position: absolute;
+	top: 6px;
+	right: 5px;
 	height: 30px;
 	padding: 6px;
-	vertical-align: middle;
-	margin: -15px 0 0 10px;
 	border-radius: 2px 2px 2px 2px;
 	background-color: #B8BED0;
 }
