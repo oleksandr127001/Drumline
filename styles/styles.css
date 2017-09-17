@@ -19,6 +19,7 @@ body {
 	font-family: 'Yanone', sans-serif;
 	font-size: 20px;
 	background-color: #F8BF00;
+	background-color: black;
 }
 .drumMachine {
 	width: 600px;
@@ -174,7 +175,7 @@ body {
 .drum {
 	width: 555px;
 	position: relative;
-	margin: 10px 0px 0 10px; 
+	margin: 10px 0 0 10px; 
 	border-bottom: 1px solid #B8BED0;
 	padding: 5px 0 12px 0;
 	display: none;
@@ -211,6 +212,15 @@ select::-ms-expand {
 .drum select:active {
 	cursor: pointer;
 	border: 0;
+}
+.drum select option:first-child {
+	display: none;
+}
+.drum select option:last-child {
+	font-size: 6px;
+}
+.drum select option {
+	font-size: 16px;
 }
 /* drum__note */
 .drum__note {
@@ -262,4 +272,84 @@ input[type=checkbox] {
 .drum__note--del:hover {
 	cursor: pointer;
 	color: #A62225;
+}
+
+@media screen and (max-width: 600px) {
+	.drumMachine {
+		width: 480px;
+	}
+	.drum {
+		width: 428px;
+		margin: 10px 0 0 14px; 
+	}
+	.drum__note--checkbox {
+		width: 17px;
+		height: 17px;
+	}
+	.drum__note--checkbox label {
+		width: 12px;
+		height: 12px;
+	}
+}
+@media screen and (max-width: 480px) {
+	.tempo {
+		display: flex;
+		align-items: center;
+		width: 120px;
+		height: 55px;
+		background-color: #B8BED0;
+		margin-right: 5px;
+		border-radius: 6px 0 0 0;
+	}
+	.tempo__screen {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 85px;
+		height: 45px;
+		margin-left: 5px;
+		background-color: #FFFFFF;
+		border-radius: 4px 0 0 0;
+		color: #3B5474;
+	}
+	.mainPanel {
+		padding: 1px;
+	}
+	.drumMachine {
+		width: 320px;
+	}
+	.drum {
+		width: 320px;
+		margin: 1px 0 0 1px; 
+		padding: 5px 0 7px 0;
+	}
+	.drum select {
+		width: 55px;
+		height: 30px;
+		font-size: 14px;
+		padding: 6px 4px 4px 3px;
+		background-position: right 5px top 10px;
+		background-size: 12px 12px;
+	}
+	.drum__note {
+		position: absolute;
+		top: 10px;
+		left: 59px;
+	}
+	.drum__note--checkbox {
+		width: 12px;
+		height: 12px;
+	}
+	.drum__note--checkbox label {
+		width: 7px;
+		height: 7px;
+		border-radius: 1px 1px 1px 1px;
+	}
+	.drum__note--del {
+		top: 5px;
+		right: 29px;
+		height: 28px;
+		padding: 8px 2px 2px 2px; 
+		font-size: 14px;
+	}
 }
